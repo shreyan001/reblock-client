@@ -1,20 +1,18 @@
 import "../flow/config";
 import { useAuth } from "../contexts/AuthContext";
-import Profile from "./Profile";
 import Link from 'next/link';
 
+
 function Landing() {
-  const { currentUser, profileExists, logOut, logIn, signUp, createProfile } =
+  const { currentUser, logOut, logIn } =
     useAuth();
 
   const AuthedState = () => {
     return (
       <div>
         <div>Logged in as: {currentUser?.addr ?? "No Address"}</div>
-        <button onClick={logOut}>Log Out</button>
+        <button className="button1" onClick={logOut}>Log Out</button>
 
-        <h2>Controls</h2>
-        <button onClick={createProfile}>Create Profile</button>
       </div>
     );
   };
@@ -22,39 +20,16 @@ function Landing() {
   const UnauthenticatedState = () => {
     return (
       <div>
-        <button onClick={logIn}>Log In</button>
-        <button onClick={signUp}>Sign Up</button>
+        <button className="button1" onClick={logIn}>Log In</button>
       </div>
     );
   };
 
-  const Messages = () => {
-    if (!currentUser?.loggedIn) {
-      return "Get started by logging in or signing up.";
-    } else {
-      if (profileExists) {
-        return "Your Profile lives on the blockchain.";
-      } else {
-        return "Create a profile on the blockchain.";
-      }
-    }
-  };
 
   return (
     <div>
       <div className="grid">
-        <div>
-          <h1>
-            Welcome to <Link href="https://docs.onflow.org">Web3</Link>
-          </h1>
-          <p>
-            <Messages />
-          </p>
-          {profileExists && <Profile />}
-        </div>
-        <div>
-          {currentUser?.loggedIn ? <AuthedState /> : <UnauthenticatedState />}
-        </div>
+    {currentUser?.loggedIn ? <AuthedState /> : <UnauthenticatedState />}
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Landing from "../components/Landing";
 import Transaction from "../components/Transaction";
+import Login from "../components/Onboard";
+
 
 export default function Home() {
   return (
@@ -13,9 +15,7 @@ export default function Home() {
 
       <main>
         <Transaction />
-        <div className="grid">
-          <Landing />
-        </div>
+       <Login/>
       </main>
     </div>
   );
