@@ -35,13 +35,15 @@ const items = new Array(x).fill(null);
 
     return (
                
-        <div className="grid grid-cols-2 grid-rows-4 gap-4">{console.log(isdata,tableName)}
-          <div className="arrange2">  {isdata.map((i)=>{return <div className="profles1">
-               <div className="image-clip"><img src={ i.image} alt={i.name}/></div> 
-                <div className="nameit">{i.name}</div>
+      <div className='w-11/12 h-28 items-center gap-4 flex flex-wrap '>
+         {isdata.map((i)=>{return <div className="w-1/5 mx-1 h-fit flex flex-col items-center">
+               <div className="w-1/5 h-fit flex flex-col overflow-hidden rounded-sm"><img src={ i.image} alt={i.name}/></div> 
+                <div className="font-semibold text-xs">{i.name}</div>
             </div>})}
-{items.map((_, idx) => <div key={idx} onClick={()=>{onOpen(tableName),synx2(tableName)}} className="joindef2 cursor-pointer"><div className=""><h3 className='text-base font-bold'>+</h3><h4 className='text-xs font-semibold'>Join</h4></div></div>)}</div>
-           </div>
+            {items.map((_, idx) => <div key={idx} onClick={()=>{onOpen(tableName),synx2(tableName)}} className= "h-fit cursor-pointer">
+  <div className="bg-black4 flex flex-col items-center justify-center px-4 mx-10 rounded-lg"><h3 className=' mt-4 font-bold text-lg'>+</h3>
+  <h4 className='font-semibold text-sm'>Join</h4></div></div>)}
+      </div>
     )
                     
  

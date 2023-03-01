@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+html,body{
+  background-color: #0D0D0D;
+ 
+}
+  
 /* width */
 ::-webkit-scrollbar {
   width: 14.5px;

@@ -210,7 +210,7 @@ theme="dark"
   }} useraddress="useraddress" isOpen={isOpen2} name={meetName} onClose={(name)=>{handleDelete2(name)}} key={2}/>
 
     <div className="stream">
-    <div className="btn1 overflow-hidden"><Image className="pb-3" src={logo} width={500} height={500} alt="V"/></div>
+    <div className="btn1 overflow-hidden"><img className="pb-3" src={logo} width={500} height={500} alt="V"/></div>
     
     <div className="miniNav"> <h1>{name}
          </h1> <Landing/>

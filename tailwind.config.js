@@ -17,6 +17,14 @@ module.exports = {
           'black2': '#262626',
           'black3': '#IEIEIE',
           'black4': '#0D0D0D',
+          gray: { "100": "#14171f", "200": "#0e1015", "300": "#0d0d0d" },
+          darkgray: "#a1a4aa",
+          white: "#fff",
+          mediumspringgreen: "#00ef8c",
+          gainsboro: "#e3e4e8",
+          plum: "#ec91d8",
+          yellow: "#faff00",
+          mediumpurple: "#918cf2",
         },
         fontSize: {
         

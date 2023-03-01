@@ -11,7 +11,7 @@ import { useState,useEffect } from "react";
       async function fetchdata() {
         try {
           const { data } = await axios.get(
-            `http://${API}/api/stalls/modal/${name}/?_id=${OId}`
+            `https://${API}/api/stalls/modal/${name}/?_id=${OId}`
           );
           setdata(data);
         } catch (error) {

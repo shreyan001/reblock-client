@@ -10,13 +10,12 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>FCL Quickstart with NextJS</title>
+        <title>re:block</title>
         <meta name="description" content="My first web3 app on Flow!" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/logoimg.png" />
       </Head>
 
       <main>
-        <Transaction />
        <Login/>
       </main>
     </div>

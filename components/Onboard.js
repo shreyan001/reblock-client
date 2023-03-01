@@ -116,8 +116,8 @@ theme="dark"
        <div className='flex w-full mx-auto pt-1 flex-row justify-between items-center '>
 
          <div className=" mx-2 flex flex-row justify-center items-center h-24 w-1/8">
-         <div className="h-fit w-fit  border-1 border-solid border-white "><img className=" h-14 w-auto" src='logo2.jpg' alt='logo'/></div>   
-            <h1 className=' font-semibold m-0 text-lg pr-3'>BlinkMeet</h1></div>
+         <div className="h-fit w-fit  border-1 border-solid border-white "><img className=" h-8 w-auto" src='/logoimg.png' alt='logo'/></div>   
+            <h1 className=' font-semibold m-0 text-lg pl-3'>re:block</h1></div>
         <div className="mx-2 flex flex-row justify-center items-center h-24 w-fit">
             <a className='hover:opacity-60 cursor-pointer colorcode font-semibold text-lg px-3'
                 onClick={()=>{toast.dark("Coming Soon")}}

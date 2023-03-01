@@ -1,11 +1,11 @@
 .App {
     text-align: center;
-    background-color: #282c34;
     height: 100vh;
     display: grid;
     place-items: center;
   }
-  
+
+ 
   .container {
     width: 100%;
   }
@@ -25,10 +25,10 @@
   
   .stream{
     display: flex;
-    height: 8rem;
-    width : 90vw;
+    height: 6rem;
+    width : 84vw;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
     margin:auto;
@@ -36,6 +36,8 @@
   
     
   }
+
+
 
   .dock {
     position: fixed;
@@ -45,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 30%;
     height: 60px; /* Change this to adjust the height of the dock */
     background-color: #333;
     z-index: 100;
@@ -90,6 +92,18 @@
   
   }
 
+  .unit{
+    background: #232323;
+    height:3rem;
+    width:25%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    padding-right: 10rem;
+    align-items: center;
+  }
+
   .addTab {
 background: #2A2A2A;
 border-radius: 9px;
@@ -125,7 +139,7 @@ border-radius: 9px;
   }
   
   .popup-content {
-    background-color: white;
+    background-color: #1c1c1c;
     border-radius: 0.8rem;
     padding: 20px;
     text-align: center;
@@ -185,7 +199,7 @@ border-radius: 9px;
     width: 86%;
     background:#232323;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 6px;
     margin:auto;
     flex-direction: row;
     padding: 1.6rem 1.6rem 1.6rem 1.6rem;
@@ -193,10 +207,10 @@ border-radius: 9px;
   }
   
   .btn1{
-    border-radius: 22px;
+    border-radius: 4px;
     background: #232323;
-    height:4.5rem;
-    width:4.5rem;
+    height:3rem;
+    width: 3rem;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -209,21 +223,24 @@ border-radius: 9px;
   
   .miniNav{
     background: #232323;
-    height:4.5rem;
-    width:70%;
-    border-radius: 22px;
+    height:3rem;
+    width:40%;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     font-weight: 700;
     padding-right: 2rem;
     align-items: center;
     
+    
   }
   
   .miniNav h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-right: 2rem;
+    
+    
   }
   
   
@@ -372,14 +389,27 @@ border-radius: 9px;
   }
   
   .button1 , .button2{
-    background: linear-gradient(91.44deg, #D800A8 17.68%, #FF007A 88.87%);
-  box-shadow: 0px 11.6153px 29.0382px rgba(253, 0, 124, 0.25);
-  border-radius: 8px;
-  width: 5rem;
-  height: 2rem;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 0.7rem;
+    background: #00EF8C;
+    box-shadow: 0px 4.77994px 4.77994px rgba(0, 0, 0, 0.5);
+    border-radius: 3.5px;
+    color: #0D0D0D;
+    font-weight: 500;
+    font-size: 0.7rem;
+    width: 6rem;
+    padding: 0.5rem 0.5rem;
+  
+    
+  }
+
+  .button3{
+    background: #ff0d00;
+    box-shadow: 0px 4.77994px 4.77994px rgba(0, 0, 0, 0.5);
+    border-radius: 3.5px;
+    color: #0D0D0D;
+    font-weight: 500;
+    font-size: 0.7rem;
+    width: 6rem;
+    padding: 0.5rem 0.5rem;
   }
   
   .mod1{

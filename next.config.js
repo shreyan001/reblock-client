@@ -7,7 +7,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'nftstorage.link',
+        hostname: 'ipfs.io',
         port: '',
         pathname: '/ipfs/**',
       },

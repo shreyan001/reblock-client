@@ -130,20 +130,22 @@ theme="dark"
     <div className="stream">
     <div className="btn1 overflow-hidden"><img className="pb-3" src={logo} width={500} height={500} alt="V"/></div>
     <div className="miniNav"> <h1>{name}
-         </h1> <Landing/>
-    </div>
+         </h1> 
+    </div><div className="unit"><Landing/></div>
+    <button className="button3 bg-red-600">Leave Meet</button>
   </div>
    
   <div className="sec2 my-5">
 
- <div className="streamb"><Player
+ <div className="streamb">
+  <h1 className="text-xl font-semibold ml-3 mb-2">Main Event</h1><Player
       title="stream"
       playbackId="8dd55f8l5jsiyhd8"
       showPipButton
       objectFit="cover"
       priority
     /></div> 
-<img className="w-3/12 h-auto" src="/div.svg"alt="V"/>
+<img className="w-3/12 mt-7 h-auto" src="/div.svg"alt="V"/>
   </div>
   <div className="w-9/12 mx-auto rounded-2xl bg-black2 flex min-h-60 flex-col justify-center items-center gap-y-5 my-10 py-5">
     <h1 className="font-semibold text-2xl left-2 ml-7">Networking Slots</h1>
@@ -153,15 +155,8 @@ theme="dark"
       })}</div></div>
  <div className="dock">
       {/* Add your dock items here */}
-      <div className="dock-item">
-        <img src="/twitter.png" alt="twitter" />
-      </div>
-      <div className="dock-item">
-        <img src="/twitter.png" alt="/twitter.png" />
-      </div>
-      <div className="dock-item">
-        <img src="/twitter.png" alt="/twitter.png" />
-      </div>
+      <img src="/Modal.png" alt="V"/>
+      
       {/* Add more dock items here */}
     </div>  
      
