@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 export default function Register({code,address,objectName,isMOpen,onMClose,id})  {
     
-    if(isMOpen===false) {return null} ;
+ 
     const router = useRouter();
     const API = process.env.NEXT_PUBLIC_API_URI;
   
@@ -36,7 +36,7 @@ export default function Register({code,address,objectName,isMOpen,onMClose,id}) 
       router.push(`/login/${objectName}/${code}`)
     }
 
-    
+    if(isMOpen===false) {return null} ; 
 
   return(<div className="  overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none m-auto w-1/3 h-1/2 gap-3
    bg-black1 rounded-xl flex flex-col items-center justify-center">

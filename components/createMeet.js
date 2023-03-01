@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 const CreateMeet = ({address, onClose, meetMod}) => {
 
-  if(meetMod===false){return null};
+  
   const API = process.env.NEXT_PUBLIC_API_URI;
   const router = useRouter();
   const [meetName, setMeetName] = useState('');
@@ -69,6 +69,7 @@ const CreateMeet = ({address, onClose, meetMod}) => {
   const handleOptInChange = (event) => {
     setOptIn(event.target.value);
   };
+  if(meetMod===false){return null};
 
   return (
     <div className="flex justify-center items-center h-screen popup">

@@ -2,9 +2,11 @@ import Head from "next/head";
 import Landing from "../components/Landing";
 import Transaction from "../components/Transaction";
 import Login from "../components/Onboard";
+import { useRouter } from "next/router";
 
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       <Head>
