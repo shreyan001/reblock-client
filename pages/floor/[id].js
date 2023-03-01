@@ -3,7 +3,6 @@ import Modal from  '../../components/Modal'
 import Stall from "../../Cards/Stall";
 import Table from "../../Cards/Table";
 import Drooms from "../../Cards/Drooms";
-import { Player } from "@livepeer/react";
 import axios from 'axios';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import StallModal from "../../Cards/StallModal";
@@ -194,7 +193,7 @@ pauseOnHover
 theme="dark"
 />
 {console.log(ObjId)}
-<StallModal stallModal={stallModal} OId={ObjId} name={stallModalName} onOpen={(name)=>tableRender2(name)} onClose={()=>{setstallModal(false)}}/>
+
 <Modal className="mod1" iframeData={ {
     roomUrl: `http://iframe.huddle01.com/${meetName+useraddress}`,
     width: "100%",
@@ -219,14 +218,6 @@ theme="dark"
    
   <div className="sec2 my-5">
 
- <div className="streamb"><Player
-      title="stream"
-      playbackId="8dd55f8l5jsiyhd8"
-      
-      showPipButton
-      objectFit="cover"
-      priority
-    /></div> 
 <img className="w-3/12 h-auto" src="/div.svg"alt="V"/>
   </div>
  

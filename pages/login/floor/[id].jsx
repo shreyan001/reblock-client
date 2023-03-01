@@ -13,6 +13,7 @@ export default function ProductPage() {
       <h1>Product {id}</h1>
       {/* Display product data here */}
       <Landing/>
+      <button onClick={()=>{router.push(`/floor/${id}`)}} className="button1">Enter Meet</button>
     </div>
   );
 }

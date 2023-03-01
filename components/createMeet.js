@@ -43,10 +43,11 @@ const CreateMeet = ({address, onClose, meetMod}) => {
       setUploadError('Please upload a logo before submitting the form.');
       return;
     }
-
+     
+   
     const data = {
-      meetName,
-      meetLogo: `https://nftstorage.link/ipfs/${logoCid}`,
+      name: meetName,
+      logo: `https://nftstorage.link/ipfs/${logoCid}`,
       Owner: address,
       
     };
@@ -55,7 +56,7 @@ const CreateMeet = ({address, onClose, meetMod}) => {
       await axios.post(`http://${API}/api/${meetType}s/`, data).then(response => {
         const id = `${meetType}Id`
         console.log(id);
-        router.push(`/login/meet/${response.data[id]}`)
+        router.push(`/login/${meetType}/${response.data[id]}`)
       });
     } catch (error) {
       console.log(error);
