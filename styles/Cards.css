@@ -178,6 +178,21 @@
  
 }
 
+.joindef2{
+    display: flex;
+    max-height: 3rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 3.7rem;
+    background: #232323;
+    border-radius: 4px;
+    width: auto;
+  
+}
+
+
 
 
 .joindef1 h3 {

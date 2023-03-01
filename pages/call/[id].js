@@ -23,7 +23,7 @@ import Landing from "../../components/Landing";
  const [logo, setLogo]= useState([]);
    
  const useraddress = currentUser?.addr;
-  console.log(useraddress);
+
    const API = process.env.NEXT_PUBLIC_API_URI;
 
 
