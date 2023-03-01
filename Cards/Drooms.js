@@ -7,13 +7,13 @@ export default function Drooms({channelName,OId,topicName,onOpen}){
     const API = process.env.NEXT_PUBLIC_API_URI;
     const [isData, setData] = useState([]);
     const synx2 = async(name) => {
-        const {data} = await axios.get(`http://${API}/api/channels/${name}/?_id=${OId}`) 
+        const {data} = await axios.get(`https://${API}/api/channels/${name}/?_id=${OId}`) 
         console.log({data})
         let data2 = data;
         console.log(data2)
        if (data2) {
          
-      const {data} = await axios.post(`http://${API}/api/users`, {addr:data2,_id:OId} )
+      const {data} = await axios.post(`https://${API}/api/users`, {addr:data2,_id:OId} )
       console.log(data,name,OId);
       setData(data);
       

@@ -30,7 +30,7 @@ import Landing from "../../components/Landing";
    const handleDelete = async(name1) => {
     try {
       const response = await axios.delete(
-        `http://${API}/api/tables/${name1}/`,
+        `https://${API}/api/tables/${name1}/`,
         { data: { addr: useraddress, _id: ObjId } }
       );
   
@@ -59,7 +59,7 @@ import Landing from "../../components/Landing";
    
     const toastId  = toast.loading("Loading...");
     const addr = useraddress;
-      const response = await axios.put(`http://${API}/api/tables/${name}`, {addr,_id:ObjId});
+      const response = await axios.put(`https://${API}/api/tables/${name}`, {addr,_id:ObjId});
     if (response.status === 200) {
       runcall(name);
       toast.update(toastId, { render: "Joined", type: "success", isLoading: false, autoClose: 5000})
@@ -81,7 +81,7 @@ import Landing from "../../components/Landing";
     try {
       const { id } = router.query;
       if (id) {
-        const { data: callData } = await axios.post(`http://${API}/api/calls/get`, { callId: id });
+        const { data: callData } = await axios.post(`https://${API}/api/calls/get`, { callId: id });
         console.log(callData);
         if(callData.Owner === useraddress){setIsOwner(true)}
         setName(callData.userDoc.callName);
@@ -89,7 +89,7 @@ import Landing from "../../components/Landing";
         setLogo(callData.userDoc.callLogo);
       }
       if (ObjId !== null) {
-        const { data: userData } = await axios.get(`http://${API}/api/tables/?_id=${ObjId}`);
+        const { data: userData } = await axios.get(`https://${API}/api/tables/?_id=${ObjId}`);
         setIsData(userData.userDoc);
       }
     } catch (error) {

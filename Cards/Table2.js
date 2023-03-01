@@ -7,12 +7,12 @@ export default function Table({onOpen,tableName,OId}){
     let x = 4 - isdata.length;
  
     const synx2 = async(name) => {
-      const {data} = await axios.get(`http://${API}/api/tables/${name}/?_id=${OId}`) 
+      const {data} = await axios.get(`https://${API}/api/tables/${name}/?_id=${OId}`) 
       console.log(data, name)
       let data2 = data;
      if (data2) {
        
-    const {data} = await axios.post(`http://${API}/api/users`, {addr:data2,_id:OId} )
+    const {data} = await axios.post(`https://${API}/api/users`, {addr:data2,_id:OId} )
     console.log(data,name);
     setData(data);
     }};

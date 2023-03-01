@@ -18,7 +18,7 @@ export default function Register({code,address,objectName,isMOpen,onMClose,id}) 
 
       if(name.length <= 4){toast.error("Name must have atleast 5 characters")}
 
-      else { const response = await fetch(`http://${API}/api/register`, {
+      else { const response = await fetch(`https://${API}/api/register`, {
         method: 'POST',
         body: JSON.stringify({img,name,addr,_id}),
         headers: {'Content-Type':'application/json'},

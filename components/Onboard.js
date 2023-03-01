@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import Landing from './Landing';
 import { useAuth } from '../contexts/AuthContext';
 
+
 import axios from "axios";
 
 
@@ -33,7 +34,7 @@ const API = process.env.NEXT_PUBLIC_API_URI;
 async function handleLogin() {
   const toastId = toast.loading("Loading...");
   try {
-    const block = await axios.post(`http://${API}/api/blocks/search/`,{Id:code});
+    const block = await axios.post(`https://${API}/api/blocks/search/`,{Id:code});
     const blockData = block.data;
     const objName = Object.keys(blockData)[0];
     setObjName(objName);
@@ -46,7 +47,7 @@ async function handleLogin() {
     if(block.status===200) {
       if(objName && blockData[objName]._id) {
         setid(blockData[objName]._id);
-        const response = await axios.post(`http://${API}/api/login`, {address:currentUser?.addr,id:blockData[objName]._id});
+        const response = await axios.post(`https://${API}/api/login`, {address:currentUser?.addr,id:blockData[objName]._id});
   
         if (response.status === 200) {
           toast.update(toastId, { render: "All is good", type: "success", isLoading: false, autoClose: 5000 });

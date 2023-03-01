@@ -30,7 +30,7 @@ import Image from 'next/image'
    const handleDelete = async(name1) => {
     try {
       const response = await axios.delete(
-        `http://${API}/api/tables/${name1}/`,
+        `https://${API}/api/tables/${name1}/`,
         { data: { addr: useraddress, _id: ObjId } }
       );
   
@@ -60,7 +60,7 @@ import Image from 'next/image'
    
     const toastId  = toast.loading("Loading...");
     const addr = useraddress;
-      const response = await axios.put(`http://${API}/api/tables/${name}`, {addr,_id:ObjId});
+      const response = await axios.put(`https://${API}/api/tables/${name}`, {addr,_id:ObjId});
     if (response.status === 200) {
       runMeet(name);
       toast.update(toastId, { render: "Joined", type: "success", isLoading: false, autoClose: 5000})
@@ -79,7 +79,7 @@ import Image from 'next/image'
     try {
       const { id } = router.query;
       if (id) {
-        const { data: meetData } = await axios.post(`http://${API}/api/floors/get`, { floorId: id });
+        const { data: meetData } = await axios.post(`https://${API}/api/floors/get`, { floorId: id });
         console.log(meetData);
         if(meetData.Owner === useraddress){setIsOwner(true)}
         setName(meetData.userDoc.floorName);
@@ -87,7 +87,7 @@ import Image from 'next/image'
         setLogo(meetData.userDoc.floorLogo);
       }
       if (ObjId !== null) {
-        const { data: userData } = await axios.get(`http://${API}/api/tables/?_id=${ObjId}`);
+        const { data: userData } = await axios.get(`https://${API}/api/tables/?_id=${ObjId}`);
         setIsData(userData.userDoc);
       }
     } catch (error) {

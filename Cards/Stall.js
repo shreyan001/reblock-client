@@ -7,19 +7,19 @@ export default function Stall({title,onOpen,host,OId,stallName}){
     const [isData, setData] = useState([]);
 
     const cosx = async() => {
-      const {data} = await axios.post(`http://${API}/api/users`, {addr:host,_id:OId} )
+      const {data} = await axios.post(`https://${API}/api/users`, {addr:host,_id:OId} )
       console.log(data)
       return data; 
     };
     
     const synx2 = async(name) => { 
-      const {data} = await axios.get(`http://${API}/api/stalls/${name}/?_id=${OId}`) 
+      const {data} = await axios.get(`https://${API}/api/stalls/${name}/?_id=${OId}`) 
       console.log({data})
       let data2 = data;
       console.log(data2)
     
       if (data2) {
-        const {data} = await axios.post(`http://${API}/api/users`, {addr:data2,_id:OId} )
+        const {data} = await axios.post(`https://${API}/api/users`, {addr:data2,_id:OId} )
         console.log(data,name);
         if (isData.length === 0 || JSON.stringify(isData[isData.length - 1]) !== JSON.stringify(data)) {
             setData(isData => [...isData, ...data]); // update the isData state by appending the new data to the previous state
