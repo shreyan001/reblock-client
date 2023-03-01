@@ -7,6 +7,7 @@ import { ToastContainer, toast, Slide } from 'react-toastify';
 import { useRouter } from "next/router";
 import { useAuth } from "../../contexts/AuthContext";
 import Landing from "../../components/Landing";
+import Image from "next/image";
 
 
 
@@ -155,7 +156,7 @@ theme="dark"
       })}</div></div>
  <div className="dock">
       {/* Add your dock items here */}
-      <img src="/Modal.png" alt="V"/>
+      <Image src="/Modal.png" width="400" height="80" alt="V"/>
       
       {/* Add more dock items here */}
     </div>  
